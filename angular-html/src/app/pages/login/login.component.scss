@@ -1,0 +1,198 @@
+.login-wrapper {
+  background-color: #449898;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  .logo {
+    gap: 13px;
+    margin-bottom: 46px;
+    display: inline-flex;
+    span {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+  .left-panel {
+    color: #ffffff;
+    padding: 25px;
+    position: relative;
+    max-width: 470px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    .info-text {
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 700;
+      max-width: 323px;
+    }
+  }
+  .white-box {
+    background-color: #ffffff;
+    border-radius: 30px 0 0 30px;
+    max-width: calc(100% - 470px);
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    ::ng-deep .language-field {
+      position: absolute;
+      top: 5px;
+      right: 16px;
+      .mdc-text-field--outlined {
+        --mdc-outlined-text-field-outline-width: 0;
+        --mdc-outlined-text-field-focus-outline-width: 0;
+      }
+      .mat-mdc-text-field-wrapper {
+        padding: 0 4px;
+      }
+      .mat-mdc-select {
+        .mat-mdc-select-trigger {
+          gap: 6px;
+          text-align: right;
+        }
+        .mat-mdc-select-arrow {
+          height: 24px;
+          width: 24px;
+          svg {
+            background-image: url("../../../assets/images/language-select-down-icon.svg");
+            background-position: center right 4px;
+          }
+        }
+      }
+    }
+    .login-form {
+      max-width: 375px;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      padding: 60px 0;
+    }
+    h2 {
+      padding-bottom: 10px;
+    }
+    .description-text {
+      font-size: 18px;
+      line-height: 22px;
+      color: #393939;
+    }
+    .email-field {
+      margin-bottom: 20px;
+    }
+    .password-field {
+      margin-bottom: 15px;
+    }
+    .action-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+    .mdc-button--unelevated {
+      width: 100%;
+      font-size: 22px;
+      line-height: 26px;
+      padding: 4px 12px;
+      margin-bottom: 36px;
+    }
+    .create-account-text {
+      max-width: 308px;
+      padding-bottom: 0;
+    }
+  }
+  .shapes {
+    position: absolute;
+  }
+  .top-right {
+    top: 0;
+    left: 402px;
+  }
+  .left-center {
+    left: 0;
+    top: 290px;
+  }
+  .bottom-left {
+    bottom: 0;
+    left: 84px;
+  }
+  .banner {
+    bottom: 6px;
+    left: 86px;
+    z-index: 1;
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+}
+@media (max-width: 1199px) {
+  .login-wrapper {
+    .banner {
+      left: 6px;
+    }
+    .left-panel {
+      max-width: 360px;
+    }
+    .white-box {
+      max-width: calc(100% - 360px);
+    }
+  }
+}
+@media (max-width: 991px) {
+  .login-wrapper {
+    flex-direction: column;
+    padding: 0 16px 20px;
+    .top-right {
+      left: auto;
+      right: 0;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .banner {
+      display: none;
+    }
+    .left-panel {
+      max-width: none;
+      padding: 20px 0;
+      text-align: center;
+      .info-text {
+        max-width: none;
+        padding-bottom: 16px;
+      }
+    }
+    .white-box {
+      max-width: 500px;
+      min-height: calc(100vh - 174px);
+      border-radius: 30px;
+      margin: 0 auto;
+      padding: 0 16px;
+      .login-form {
+        min-height: calc(100vh - 174px);
+        padding: 60px 0 50px;
+        text-align: center;
+        justify-content: start;
+      }
+      .create-account-text {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  .login-wrapper {
+    .left-panel {
+      .info-text {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+}

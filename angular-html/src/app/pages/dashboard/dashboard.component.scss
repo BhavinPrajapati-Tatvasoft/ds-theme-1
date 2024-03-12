@@ -1,0 +1,208 @@
+.secondary-row {
+  margin-bottom: 24px;
+}
+
+.statistics-card {
+  margin-bottom: 10px;
+  height: calc(100% - 10px);
+  .mat-mdc-card-content {
+    display: flex;
+    align-items: center;
+    .barnd-logo {
+      height: 45px;
+      width: 45px;
+      align-self: flex-start;
+    }
+    .content {
+      padding-left: 36px;
+      .level {
+        font-size: 14px;
+        line-height: 18px;
+        color: #a3a3a3;
+        display: block;
+        padding-bottom: 4px;
+      }
+      .technology-label {
+        color: #4d4d4d;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        padding-bottom: 17px;
+      }
+      .organizer {
+        display: flex;
+        align-items: center;
+        .label {
+          font-size: 16px;
+          line-height: 20px;
+          color: #a3a3a3;
+        }
+        i {
+          margin: 0 15px 0 10px;
+          border-radius: 50%;
+          border: 1px solid #c7cacf;
+          display: block;
+          height: 35px;
+          width: 35px;
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            height: 33px;
+            width: 33px;
+          }
+        }
+        .organizer-name {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 500;
+          color: #4d4d4d;
+        }
+      }
+    }
+  }
+  .mat-mdc-card-footer {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ebe7e7;
+    .percent-value {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
+      letter-spacing: 0.36px;
+      color: #4d4d4d;
+      margin-right: 8px;
+    }
+    .mat-mdc-progress-bar {
+      max-width: 90px;
+      width: 100%;
+    }
+    .total-items {
+      padding-bottom: 0;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
+      color: #a3a3a3;
+      display: flex;
+      align-items: center;
+      margin-left: 36px;
+      margin-right: auto;
+      span:first-child {
+        color: #4d4d4d;
+      }
+    }
+  }
+}
+::ng-deep.curve-card {
+  .mat-mdc-card-header-text {
+    align-self: flex-start;
+  }
+  .mat-mdc-form-field-type-mat-select {
+    --mdc-outlined-text-field-outline-color: #c9c9c9;
+    .mdc-text-field--outlined {
+      --mdc-outlined-text-field-container-shape: 6px;
+    }
+    .mat-mdc-text-field-wrapper {
+      padding-right: 6px;
+      padding-left: 10px;
+      &.mdc-text-field--outlined {
+        .mat-mdc-form-field-infix {
+          padding-top: 6px;
+          padding-bottom: 6px;
+          min-height: 36px;
+          width: auto;
+          .mat-mdc-select-value {
+            padding-right: 22px;
+          }
+        }
+      }
+    }
+  }
+  .mat-mdc-select {
+    color: #4d4d4d;
+    .mat-mdc-select-arrow {
+      svg {
+        background-image: url("../../../assets/images/outline-select-chevron-down.svg");
+        background-size: 14px;
+        background-position: center;
+      }
+    }
+  }
+}
+::ng-deep .curve-select {
+  .mat-pseudo-checkbox {
+    display: none;
+  }
+}
+.earning-card,
+.statistics-lg-card {
+  &.mat-mdc-card {
+    height: auto;
+  }
+}
+.statistics-lg-card {
+  margin-bottom: 30px;
+}
+::ng-deep .lg-progress {
+  svg {
+    max-width: 160px;
+    text {
+      tspan:last-child {
+        display: block;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+.earning-card {
+  .earning-item-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .earning-item {
+    display: flex;
+    align-items: center;
+    .label,
+    .value {
+      padding-bottom: 0;
+    }
+    .label {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      color: #a3a3a3;
+      margin-left: 26px;
+      margin-right: auto;
+    }
+    .value {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #4d4d4d;
+    }
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .statistics-card {
+    margin-bottom: 0;
+    height: 100%;
+  }
+  .statistics-lg-card {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1399px) {
+  .statistics-card {
+    .mat-mdc-card-content {
+      .content {
+        padding-left: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+}

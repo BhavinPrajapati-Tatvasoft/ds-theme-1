@@ -1,0 +1,206 @@
+<h3 class="page-heading pb-0 pb-xxl-1" data-aos="fade-in">Dashboard</h3>
+<!-- Statistics Start -->
+<div class="row">
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="100">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <img src="./assets/images/thingworx-tool-logo.png" alt="Thingworx Tool" class="barnd-logo" />
+                <div class="content">
+                    <span class="level">Advanced</span>
+                    <p class="technology-label">Thingworx Tool</p>
+                    <div class="organizer">
+                        <span class="label">by</span>
+                        <i>
+                            <img src="./assets/images/user-1.png" alt="Rahul Soni">
+                        </i>
+                        <span class="organizer-name">Rahul Soni</span>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-footer>
+                <span class="percent-value">68%</span>
+                <mat-progress-bar mode="determinate" value="68"></mat-progress-bar>
+                <p class="total-items"><span>14/</span><span>24</span></p>
+                <img src="./assets/images/ascension-island-flag-icon.svg" alt="Country Flag" />
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="200">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <img src="./assets/images/figma-logo.png" alt="Figma Workshop" class="barnd-logo" />
+                <div class="content">
+                    <span class="level">BEGINNERS</span>
+                    <p class="technology-label">Figma Workshop</p>
+                    <div class="organizer">
+                        <span class="label">by</span>
+                        <i>
+                            <img src="./assets/images/user-2.png" alt="Reena Seth">
+                        </i>
+                        <span class="organizer-name">Reena Seth</span>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-footer>
+                <span class="percent-value">18%</span>
+                <mat-progress-bar mode="determinate" value="68"></mat-progress-bar>
+                <p class="total-items"><span>4/</span><span>20</span></p>
+                <img src="./assets/images/india-flag-icon.svg" alt="Country Flag" />
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="300">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <img src="./assets/images/java-logo.png" alt="Advanced Java " class="barnd-logo" />
+                <div class="content">
+                    <span class="level">Advanced</span>
+                    <p class="technology-label">Advanced Java</p>
+                    <div class="organizer">
+                        <span class="label">by</span>
+                        <i>
+                            <img src="./assets/images/user-3.png" alt="Jenny Will">
+                        </i>
+                        <span class="organizer-name">Jenny Will</span>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-footer>
+                <span class="percent-value">38%</span>
+                <mat-progress-bar mode="determinate" value="38"></mat-progress-bar>
+                <p class="total-items"><span>14/</span><span>24</span></p>
+                <img src="./assets/images/liberia-flag-icon.svg" alt="Country Flag" />
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="400">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <img src="./assets/images/postman-logo.png" alt="Postman Tool" class="barnd-logo" />
+                <div class="content">
+                    <span class="level">Advanced</span>
+                    <p class="technology-label">Postman Tool</p>
+                    <div class="organizer">
+                        <span class="label">by</span>
+                        <i>
+                            <img src="./assets/images/user-4.png" alt="John Robert">
+                        </i>
+                        <span class="organizer-name">John Robert</span>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-footer>
+                <span class="percent-value">88%</span>
+                <mat-progress-bar mode="determinate" value="88"></mat-progress-bar>
+                <p class="total-items"><span>14/</span><span>24</span></p>
+                <img src="./assets/images/ethiopia-flag-icon.svg" alt="Country Flag" />
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>
+<!-- Statistics End -->
+
+<!-- Charts Start -->
+<div class="row section-row">
+    <div class="col-lg-6">
+        <mat-card class="curve-card" data-aos="fade-up" data-aos-delay="500">
+            <mat-card-header>
+                <mat-card-title>Learning Curve</mat-card-title>
+                <mat-form-field appearance="outline">
+                    <mat-select value="LastYear" panelClass="curve-select">
+                        <mat-option value="LastYear">
+                            Last Year
+                        </mat-option>
+                        <mat-option value="LastMonth">
+                            Last Month
+                        </mat-option>
+                        <mat-option value="LastWeek">
+                            Last Week
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-card-header>
+            <mat-card-content>
+                <canvas id="learningCurveChart" aria-label="chart" role="img" width="100%"></canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6">
+        <!-- Statistics Progress Start -->
+        <mat-card class="statistics-lg-card" data-aos="fade-up" data-aos-delay="600">
+            <mat-card-header>
+                <mat-card-title>Statistics</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 pt-0 text-center text-xxl-start">
+                        <circle-progress class="lg-progress" [percent]="25" [radius]="100" [maxPercent]="100"
+                            [outerStrokeWidth]="12" [space]="-12" [innerStrokeWidth]="12" [innerStrokeColor]="'#E1E1E1'"
+                            [outerStrokeColor]="'#449898'" subtitle="Profit" subtitleColor="#4D4D4D"
+                            [titleFontSize]="'24px'" [titleFontWeight]="'500'" [titleColor]="'#4D4D4D'"
+                            [showBackground]="false" subtitleFontSize="16" [lazy]="true" subtitleFontWeight="500"
+                            [animation]="true" [animateTitle]="true" [responsive]="true" [unitsFontSize]="'24px'"
+                            [unitsFontWeight]="'500'" [unitsColor]="'#4D4D4D'"
+                            [animationDuration]="2000"></circle-progress>
+
+                    </div>
+                    <div class="col-sm-6 col-md-4 pt-0 text-center text-xxl-start">
+                        <circle-progress class="lg-progress" [percent]="50" [radius]="100" [maxPercent]="100"
+                            [outerStrokeWidth]="12" [space]="-12" [innerStrokeWidth]="12" [innerStrokeColor]="'#E1E1E1'"
+                            [outerStrokeColor]="'#449898'" subtitle="Imporvement" subtitleColor="#4D4D4D"
+                            [titleFontSize]="'24px'" [showBackground]="false" [lazy]="true" [titleFontWeight]="'500'"
+                            [titleColor]="'#4D4D4D'" subtitleFontSize="16" subtitleFontWeight="500" [animation]="true"
+                            [animateTitle]="true" [responsive]="true" [unitsFontSize]="'24px'" [unitsFontWeight]="'500'"
+                            [unitsColor]="'#4D4D4D'" [animationDuration]="2000"></circle-progress>
+                    </div>
+                    <div class="col-sm-12 col-md-4 pt-0 text-center text-xxl-start">
+                        <circle-progress class="lg-progress" [percent]="68" [radius]="100" [maxPercent]="100"
+                            [outerStrokeWidth]="12" [space]="-12" [innerStrokeWidth]="12" [innerStrokeColor]="'#E1E1E1'"
+                            [outerStrokeColor]="'#449898'" subtitle="Score" subtitleColor="#4D4D4D"
+                            [titleFontSize]="'24px'" [showBackground]="false" [lazy]="true" [titleFontWeight]="'500'"
+                            [titleColor]="'#4D4D4D'" subtitleFontSize="16" subtitleFontWeight="500" [animation]="true"
+                            [animateTitle]="true" [responsive]="true" [unitsFontSize]="'24px'" [unitsFontWeight]="'500'"
+                            [unitsColor]="'#4D4D4D'" [animationDuration]="2000"></circle-progress>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <!-- Statistics Progress End -->
+
+        <!-- Earning Source Start -->
+        <mat-card class="earning-card" data-aos="fade-up" data-aos-delay="700">
+            <mat-card-header>
+                <mat-card-title>Earning Sources</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-6 pt-0">
+                        <div class="earning-item-row">
+                            <div class="earning-item">
+                                <img src="./assets/images/paypal-logo-icon.svg" alt="Paypal" />
+                                <p class="label">Pay pal</p>
+                                <p class="value">$480</p>
+                            </div>
+                            <div class="earning-item">
+                                <img src="./assets/images/gPay-logo-icon.svg" alt="Google Pay" />
+                                <p class="label">Google Pay</p>
+                                <p class="value">$860</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-sm-0">
+                        <img src="./assets/images/earning-source-chart.png" class="img-fluid" alt="Earning" />
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <!-- Earning Source End -->
+    </div>
+</div>
+<!-- Charts End -->
+
+<!-- Table Start -->
+<div data-aos="fade-up" data-aos-delay="700">
+    <app-table tableClass="mb-0" [paginationEnabled]="true"></app-table>
+</div>
+<!-- Table End -->

@@ -1,0 +1,26 @@
+.page-not-found-outer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  .not-found-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .back-btn {
+    .mat-icon {
+      position: relative;
+      z-index: 1;
+      img {
+        height: 18px;
+        width: 18px;
+      }
+    }
+  }
+}

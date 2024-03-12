@@ -1,0 +1,59 @@
+<div class="login-wrapper">
+    <img src="./assets/images/top-right-shape.svg" alt="Shape" class="shapes top-right" />
+    <img src="./assets/images/left-center-shape.svg" alt="Shape" class="shapes left-center" />
+    <img src="./assets/images/bottom-left-shape.svg" alt="Shape" class="shapes bottom-left" />
+    <img src="./assets/images/login-banner-img.png" alt="Banner" class="shapes banner" />
+    <div class="left-panel">
+        <a href="#" title="Logo" class="logo login-logo">
+            <img src="./assets/images/logo.svg" alt="Logo">
+            <span>Company</span>
+        </a>
+        <p class="info-text">Very Good works are waiting for you</p>
+    </div>
+    <div class="white-box">
+        <div class="login-form">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h2>Welcome to Company!</h2>
+                <p class="description-text">Please login to your account</p>
+                <mat-form-field class="email-field">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" />
+                </mat-form-field>
+                <mat-form-field class="password-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password':'text'" />
+                    <button matSuffix mat-icon-button (click)=" hide=!hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>
+                            <img
+                                [src]="hide ? './assets/images/show-password-icon.svg':'./assets/images/hide-password-icon.svg' " />
+                        </mat-icon>
+                    </button>
+                </mat-form-field>
+                <div class="action-wrapper">
+                    <mat-checkbox color="primary">Remember me</mat-checkbox>
+                    <a href=" #" title="Forgot Password?" class="primary-link">
+                        Forgot Password?
+                    </a>
+                </div>
+                <a routerLink="/dashboard" title="Login" mat-flat-button color="primary">Login</a>
+                <p class="create-account-text">Don’t have an account? <a href="#" class="primary-link"
+                        title=" Create your account">Create your account</a>, it takes less than a minute</p>
+            </div>
+            <app-footer></app-footer>
+        </div>
+        <mat-form-field appearance="outline" class="language-field">
+            <mat-select value="LastYear" panelClass="language-select">
+                <mat-option value="LastYear">
+                    English (UK)
+                </mat-option>
+                <mat-option value="LastMonth">
+                    English (USA)
+                </mat-option>
+                <mat-option value="LastWeek">
+                    Hindi
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>

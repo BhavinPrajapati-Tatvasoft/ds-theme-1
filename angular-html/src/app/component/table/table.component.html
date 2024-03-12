@@ -1,0 +1,104 @@
+<mat-card class="table-card {{tableClass}}">
+    <mat-card-header>
+        <mat-card-title>Contact</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-responsive">
+            <table mat-table [dataSource]="dataSource" matSort>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="FullName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Full Name</th>
+                    <td mat-cell *matCellDef="let row">
+                        <div class="fullname-outer">
+                            <img [src]="row.imgPath" alt="Profile">
+                            <span>
+                                {{row.FullName}}
+                            </span>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Address Column -->
+                <ng-container matColumnDef="PhoneNumber">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Phone Number</th>
+                    <td mat-cell *matCellDef="let row">
+                        <a [href]="'tel:' + row.PhoneNumber" [title]="row.PhoneNumber">
+                            {{row.PhoneNumber}}
+                        </a>
+                    </td>
+                </ng-container>
+
+                <!-- Role Column -->
+                <ng-container matColumnDef="EmailAddress">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Address</th>
+                    <td mat-cell *matCellDef="let row">
+                        <a [href]="'mailto:' + row.EmailAddress" [title]="row.EmailAddress">
+                            {{row.EmailAddress}}
+                        </a>
+                    </td>
+                </ng-container>
+
+                <!-- Email Column -->
+                <ng-container matColumnDef="Revenue">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Revenue</th>
+                    <td mat-cell *matCellDef="let row"> {{row.Revenue}} </td>
+                </ng-container>
+
+                <!-- Rating Column -->
+                <ng-container matColumnDef="Rating">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center">Rating</th>
+                    <td mat-cell *matCellDef="let row" class="text-center">
+                        <div class="progress-outer">
+                            <round-progress [current]="row.Rating" [max]="10" [color]="'#449898'"
+                                [background]="'#E1E1E1'" [rounded]="true" [stroke]="20" [semicircle]="true"
+                                [responsive]="true" class="semi-progress"></round-progress>
+                            <span class="ratong-value">
+                                {{row.Rating}}
+                            </span>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Status Column -->
+                <ng-container matColumnDef="Status">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="status-head text-center">Status</th>
+                    <td mat-cell *matCellDef="let row" class="text-center">
+                        <span [class]="row.Status" class="status">{{row.Status}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Action Column -->
+                <ng-container matColumnDef="Action">
+                    <th mat-header-cell *matHeaderCellDef class="text-center action-col">Action</th>
+                    <td mat-cell *matCellDef=" let row" class="text-center">
+                        <div class="action-wrapper">
+                            <button mat-icon-button [matMenuTriggerFor]="actionMenu" aria-label="Menu">
+                                <mat-icon>
+                                    <img src="./assets/images/action-vertical-icon.svg" alt="Action" />
+                                </mat-icon>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="action-menu" xPosition="before">
+                                <button mat-menu-item>
+                                    View
+                                </button>
+                                <button mat-menu-item>
+                                    Edit
+                                </button>
+                                <button mat-menu-item>
+                                    Delete
+                                </button>
+                            </mat-menu>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+        </div>
+        <mat-paginator *ngIf="paginationEnabled" [pageSizeOptions]="[4, 8, 12, 16, 100]"
+            [selectConfig]="paginationSelectConfig" aria-label="Select page of users"></mat-paginator>
+    </mat-card-content>
+</mat-card>

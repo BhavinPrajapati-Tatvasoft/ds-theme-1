@@ -1,0 +1,112 @@
+.sidebar {
+  width: 255px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #449898;
+  min-height: 100vh;
+  z-index: 1;
+  transition: all 0.3s;
+  overflow: hidden;
+  .logo {
+    padding: 4px 15px;
+    height: 70px;
+    overflow: hidden;
+    img {
+      height: 48px;
+      width: 48px;
+    }
+    span {
+      width: 116px;
+    }
+  }
+  .navbar {
+    padding-top: 26px;
+    height: calc(100% - 70px);
+    overflow: hidden auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-item {
+    padding-left: 12px;
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 45px;
+      padding: 10px 12px;
+      position: relative;
+      i {
+        display: block;
+        height: 22px;
+        width: 22px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        margin-top: -1px;
+        img {
+          display: block;
+          transition: all 0.3s;
+        }
+      }
+      .nav-label {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        transition: all 0.3s;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        border-radius: 50px 0 0 50px;
+        transition: all 0.3s;
+      }
+      &::after {
+        background-color: #ffffff;
+      }
+      &::before {
+        background-color: #7bc0c0;
+      }
+      &:hover,
+      &:focus {
+        &::before {
+          width: 100%;
+        }
+      }
+      &.active {
+        &::after {
+          width: 100%;
+        }
+        i {
+          img {
+            transform: translateY(-22px);
+          }
+        }
+        .nav-label {
+          color: #8e8e8e;
+        }
+      }
+    }
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+}
+@media (max-width: 1199px) {
+  .sidebar {
+    left: -255px;
+    z-index: 2;
+  }
+}

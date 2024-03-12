@@ -1,0 +1,97 @@
+.table-card {
+  margin-bottom: 30px;
+  .mat-sort-header {
+    &.text-center {
+      ::ng-deep.mat-sort-header-container {
+        justify-content: center;
+        margin-right: -12px;
+      }
+    }
+  }
+  .status {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: #ffffff;
+    display: inline-flex;
+    text-align: center;
+    &.Rejected {
+      background-color: #f61e33;
+    }
+    &.Completed {
+      background-color: #43a043;
+    }
+    &.Pending {
+      background-color: rgba($color: #9f9e9e, $alpha: 0.8);
+    }
+  }
+  .mat-mdc-card-content {
+    padding-bottom: 20px;
+  }
+  .fullname-outer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .progress-outer {
+    position: relative;
+    display: inline-flex;
+    .ratong-value {
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+  .semi-progress {
+    // max-width: 44px;
+    padding: 0 !important;
+    width: 48px;
+    height: 24px;
+    > svg {
+      inset: 0;
+      height: auto;
+      width: auto;
+    }
+  }
+  .mat-mdc-table {
+    .mat-mdc-header-row {
+      .action-col {
+        width: 86px;
+      }
+    }
+  }
+}
+
+.action-wrapper {
+  .mdc-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mat-icon,
+  img {
+    height: 32px;
+    width: 32px;
+    display: block;
+    min-width: 32px;
+  }
+}
+::ng-deep.action-menu {
+  &.mat-mdc-menu-panel {
+    min-width: 68px;
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .table-card {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,200 @@
+<header class="header">
+    <button mat-icon-button aria-label="Menu Icon" (click)="toggleMenu()" class="menu-btn">
+        <mat-icon>
+            <img src="./assets/images/menu-icon.svg" alt="Menu">
+        </mat-icon>
+    </button>
+
+    <!-- Search Outer Start -->
+    <div class="search-wrapper">
+        <mat-form-field>
+            <input type="text" placeholder="Search here.." aria-label="Search" matInput [formControl]="myControl"
+                [matAutocomplete]="auto">
+            <button mat-icon-button aria-label="Search Button" matPrefix>
+                <mat-icon>
+                    <img src="./assets/images/search-icon.svg" alt="Search">
+                </mat-icon>
+            </button>
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+    <!-- Search Outer End -->
+
+    <!-- Right Items Start -->
+    <div class="heading-right">
+        <button mat-icon-button aria-label="Search" class="search-btn" (click)="toggleSearch()">
+            <mat-icon>
+                <img src="./assets/images/search-icon.svg" alt="Search">
+            </mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="notificatioMenu" aria-label="Notification">
+            <mat-icon matBadge="5" matBadgeColor="warn">
+                <img src="./assets/images/notification-icon.svg" alt="Notification">
+            </mat-icon>
+        </button>
+        <mat-menu #notificatioMenu="matMenu" xPosition="before" class="header-menu">
+            <div class="heading-part">
+                <h5>Notifications</h5>
+                <a href="#" class="primary-link" title="View all">View all</a>
+            </div>
+            <div class="list-items">
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-1.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at sud asmet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-2.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Order Delivered at sud amsesaaat.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-3.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-4.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-5.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button><button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-3.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-4.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-5.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+            </div>
+        </mat-menu>
+
+        <button mat-icon-button [matMenuTriggerFor]="messageMenu" aria-label="Message">
+            <mat-icon>
+                <img src="./assets/images/message-icon.svg" alt="Message">
+            </mat-icon>
+        </button>
+        <mat-menu #messageMenu="matMenu" xPosition="before" class="header-menu">
+            <div class="heading-part">
+                <h5>Message</h5>
+                <a href="#" class="primary-link" title="View all">View all</a>
+            </div>
+            <div class="list-items">
+                <button mat-menu-item>
+                    <i class="blue-icon">
+                        <img src="./assets/images/lock-white-icon.svg" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your password has successfully
+                            changed</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-2.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Thank you for booking aa meeting with us.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-3.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Great news! We are launching new App.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-4.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>Your order is placed at suud amet.</span>
+                        <em>Oct 3, 2017 9:00 PM</em>
+                    </div>
+                </button>
+            </div>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="profileMenu" aria-label="Profile Menu" class="profile-btn">
+            <img src="./assets/images/user-profile.png" alt="User Profile" class="profile-img">
+            <span class=" profile-text">
+                Hello Rick
+            </span>
+            <img src="./assets/images/down-arrow-icon.svg" alt="Down Arrow" class="down-arrow">
+        </button>
+        <mat-menu #profileMenu="matMenu" class="profile-menu" xPosition="before">
+            <button mat-menu-item>
+                <mat-icon>
+                    <img src="./assets/images/profile-icon.svg" alt="Profile">
+                </mat-icon>
+                <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>
+                    <img src="./assets/images/setting-icon.svg" alt="Setting">
+                </mat-icon>
+                <span>Setting</span>
+            </button>
+            <a mat-menu-item routerLink="/login" title="Logout">
+                <mat-icon>
+                    <img src="./assets/images/logout-icon.svg" alt="Logout">
+                </mat-icon>
+                <span>Logout</span>
+            </a>
+        </mat-menu>
+    </div>
+    <!-- Right Items End -->
+    <div class="search-overlay" (click)="removeSearchbar()"></div>
+</header>

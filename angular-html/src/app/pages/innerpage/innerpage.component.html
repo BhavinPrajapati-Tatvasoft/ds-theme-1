@@ -1,0 +1,297 @@
+<h3 class="page-heading" data-aos="fade-in">Inner Page</h3>
+<mat-card class="form-card">
+    <mat-card-content>
+        <!-- Single Column Start -->
+        <h4 class="section-heading" data-aos="fade-up">One Column</h4>
+        <div class="row section-row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" />
+                </mat-form-field>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <mat-form-field>
+                    <mat-label>Dropdown</mat-label>
+                    <mat-select>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                        <mat-option value="option1">Option 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                <mat-form-field>
+                    <mat-label>Comment</mat-label>
+                    <textarea rows="3" matInput></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Single Column End -->
+
+        <!-- Two Column Start -->
+        <h4 class="section-heading" data-aos="fade-up" data-aos-delay="400">Two Column</h4>
+        <div class="row overflow-hidden section-row">
+            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                <mat-form-field>
+                    <mat-label>UserName</mat-label>
+                    <input matInput type="text" />
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="600">
+                <mat-form-field>
+                    <mat-label>Dropdown</mat-label>
+                    <mat-select>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                        <mat-option value="option1">Option 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="700">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" value="Suresh Raina" />
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="800">
+                <mat-form-field class="password-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password':'text'" />
+                    <button matSuffix mat-icon-button (click)=" hide=!hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>
+                            <img
+                                [src]="hide ? './assets/images/show-password-icon.svg':'./assets/images/hide-password-icon.svg'" />
+                        </mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Two Column End -->
+
+        <!-- Three Column Start -->
+        <h4 class="section-heading" data-aos="fade-up" data-aos-delay="900">Three Column</h4>
+        <div class="row section-row overflow-hidden">
+            <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="1000">
+                <mat-form-field>
+                    <mat-label>Error</mat-label>
+                    <input matInput type="text" value="Suresh Raina" />
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="1100">
+                <mat-form-field>
+                    <mat-label>Focus</mat-label>
+                    <input matInput type="text" value="Ready" />
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="1200">
+                <mat-form-field>
+                    <mat-label>Disabled</mat-label>
+                    <input matInput type="text" value="John Smith" disabled />
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Three Column End -->
+
+        <!-- Four Column Start -->
+        <h4 class="section-heading" data-aos="fade-up" data-aos-delay="1300">Four Column</h4>
+        <div class="row section-row overflow-hidden">
+            <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+                <mat-form-field class="password-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide2 ? 'password':'text'" />
+                    <button matSuffix mat-icon-button (click)=" hide2=!hide2" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide2">
+                        <mat-icon>
+                            <img
+                                [src]="hide2 ? './assets/images/show-password-icon.svg':'./assets/images/hide-password-icon.svg' " />
+                        </mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+                <mat-form-field>
+                    <mat-label>Dropdown</mat-label>
+                    <mat-select>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                        <mat-option value="option1">Option 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-delay="300">
+                <mat-form-field>
+                    <mat-label>Disabled</mat-label>
+                    <input matInput type="text" value="John Smith" disabled />
+                </mat-form-field>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-delay="400">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" value="Suresh Raina" />
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Four Column End -->
+
+        <!-- File Upload Start -->
+        <h4 class="section-heading other-element-heading" data-aos="fade-up">Other Element</h4>
+        <h6 class="small-heading" data-aos="fade-up">File Upload</h6>
+        <div class="file-upload-outer" data-aos="fade-up">
+            <div class="input-wrapper">
+                <img src="./assets/images/file-upload-icon.svg" alt="File Upload" />
+                <span>Upload</span>
+                <input type="file" id="file-upload" />
+            </div>
+            <p>No Item Selected</p>
+        </div>
+        <!-- File Upload End -->
+
+        <!-- Radio Button Start -->
+        <h6 class="small-heading" data-aos="fade-up">Radio Button</h6>
+        <mat-radio-group aria-label="Select an option" class="radio-outer" data-aos="fade-up">
+            <mat-radio-button color="primary" value=" 1">Option 1</mat-radio-button>
+            <mat-radio-button color="primary" value=" 2">Option 2</mat-radio-button>
+        </mat-radio-group>
+        <!-- Radio Button End -->
+
+        <!-- Checkbox Start -->
+        <h6 class="small-heading" data-aos="fade-up">Check Box</h6>
+        <div class="checbox-outer" data-aos="fade-up">
+            <mat-checkbox color="primary">Option 1</mat-checkbox>
+            <mat-checkbox color="primary">Option 2</mat-checkbox>
+        </div>
+        <!-- Checkbox End -->
+
+        <!-- Snackbar Start -->
+        <h6 class="small-heading pb-0" data-aos="fade-up">Snack Bar</h6>
+        <div class="row snack-row overflow-hidden">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="snackbar-outer success">
+                    <span matSnackBarLabel class="snack-label">
+                        <mat-icon>
+                            <img src="./assets/images/snackbar-success-icon.svg" alt="Success">
+                        </mat-icon>
+                        This is a success message
+                    </span>
+                    <span matSnackBarActions class="action-btn">
+                        <button mat-icon-button matSnackBarAction>
+                            <mat-icon>
+                                <img src="./assets/images/snackbar-close-icon.svg" alt="Close" />
+                            </mat-icon>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="snackbar-outer info">
+                    <span matSnackBarLabel class="snack-label">
+                        <mat-icon>
+                            <img src="./assets/images/snackbar-info-icon.svg" alt="Info">
+                        </mat-icon>
+                        This is an info message
+                    </span>
+                    <span matSnackBarActions class="action-btn">
+                        <button mat-icon-button matSnackBarAction>
+                            <mat-icon>
+                                <img src="./assets/images/snackbar-close-icon.svg" alt="Close" />
+                            </mat-icon>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="snackbar-outer warning">
+                    <span matSnackBarLabel class="snack-label">
+                        <mat-icon>
+                            <img src="./assets/images/snackbar-warning-icon.svg" alt="Warning">
+                        </mat-icon>
+                        This is an alert message
+                    </span>
+                    <span matSnackBarActions class="action-btn">
+                        <button mat-icon-button matSnackBarAction>
+                            <mat-icon>
+                                <img src="./assets/images/snackbar-close-icon.svg" alt="Close" />
+                            </mat-icon>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="snackbar-outer error">
+                    <span matSnackBarLabel class="snack-label">
+                        <mat-icon>
+                            <img src="./assets/images/snackbar-error-icon.svg" alt="Error">
+                        </mat-icon>
+                        This is an error message
+                    </span>
+                    <span matSnackBarActions class="action-btn">
+                        <button mat-icon-button matSnackBarAction>
+                            <mat-icon>
+                                <img src="./assets/images/snackbar-close-icon.svg" alt="Close" />
+                            </mat-icon>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Snackbar End -->
+
+        <!-- Buttons Start -->
+        <h6 class="small-heading" data-aos="fade-up">CTA</h6>
+        <div class="btn-outer" data-aos="fade-up">
+            <button mat-flat-button color="primary">Primary</button>
+            <button mat-stroked-button color="primary">Secondary</button>
+        </div>
+        <!-- Buttons End -->
+
+
+        <!-- Tabs Start -->
+        <h4 class="section-heading tab-heading" data-aos="fade-up">Tabs</h4>
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" data-aos="fade-up">
+            <mat-tab label="Tab 1">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nos trud amet. Amet minim mollit non
+                    deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                    Exercitation veniam cnsequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit
+                    aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                    consequat sunt nostrud amet.
+                </p>
+                <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nos trud amet. Amet minim mollit non
+                    deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                    Exercitation veniam cnsequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit
+                    aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                    consequat sunt nostrud amet.</p>
+            </mat-tab>
+            <mat-tab label="Tab 2">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum nisi, cras non congue amet, eu
+                    interdum. Purus vulputate odio eget curabitur porttitor tempus ipsum. Amet risus aenean tortor sed
+                    lacus, nunc. Velit semper ullamcorper at tortor pellentesque augue vehicula sed viverra. Quam sit
+                    adipiscing egestas etiam nunc adipiscing non luctus cursus.
+                </p>
+            </mat-tab>
+            <mat-tab label="Tab 3">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum nisi, cras non congue amet, eu
+                    interdum. Purus vulputate odio eget curabitur porttitor tempus ipsum.
+                </p>
+                <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nos trud amet. Amet minim mollit non
+                    deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                    Exercitation veniam cnsequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit
+                    aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                    consequat sunt nostrud amet.
+                </p>
+            </mat-tab>
+        </mat-tab-group>
+        <!-- Tabs End -->
+    </mat-card-content>
+</mat-card>
